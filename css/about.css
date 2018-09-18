@@ -1,0 +1,32 @@
+
+
+.about-page-section {
+  background: #f4cf3a;
+}
+
+.image-container {
+  height: 250px;
+  width: 250px;
+  padding-top: 100px;
+  margin: 0 auto 100px auto;
+}
+
+.section-container img {
+  height: 250px;
+  width: 250px;
+}
+
+.section-text-wrapper {
+  padding-bottom: 200px;
+}
+
+.section-header-wrapper::before,
+.section-text-wrapper::after { /* styling ahead of headers */
+  display: none;
+}
+
+
+footer {
+  background: url('../images/karakoy-5.jpg') center center no-repeat;
+  background-size: cover;
+}

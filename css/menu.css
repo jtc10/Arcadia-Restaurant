@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+.paralax-menu {  /* background image for menu page */
+  background: url('../images/background-menu.jpg') center center no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+/**********  Menu Introduction Section **********/
+/**********                            **********/
+
+.menu-hero {  /* styling for menu introduction */
+  background: url('../images/menu-bg.png') center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+.menu-hero h1 {
+  color: #f9f9f9;
+  padding-top: 40px;
+  letter-spacing: 1rem;
+}
+
+/**********  General Styling for Menu Sections **********/
+/**********                                    **********/
+
+
+.menu-section .section-container {  /* styling for sections on menu page */
+  text-align: left;
+  font-weight: lighter;
+}
+
+.section-text-wrapper {  /* styling override from main.css */
+  padding-bottom: 50px;
+}
+.section-text-wrapper::after {  /* styling override from main.css */
+  content: '';
+  display: none;
+}
+
+.menu-header {  /* styling for the title(h1) of each menu section */
+  font-size: 2.5rem;
+  padding-top: 100px;
+  margin-bottom: 50px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.flex-container {  /* container for list of menu items */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.menu-item {  /* individual menu items */
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1.1rem;
+  border-bottom: 1px dashed #D3D3D3;
+  padding: 25px 0;
+}
+
+.menu-item-description { /* description of menu items when applicable */
+  font-size: .9rem;
+  font-family: 'Handlee', cursive;
+  padding-top: 5px;
+}
+
+.starters-salads,
+.cold-drinks {         /* background for various sections */
+  background: #3b444d;
+}
+
+.menu-intro,
+.drinks-intro,
+.grill,
+.hot-drinks {
+  background: #f9f9f9;
+}
+
+
+
+.argentina-special {
+  background: #ff6961;
+}
+
+/********** Drinks Section **********/
+
+.cold-drinks,
+.hot-drinks {
+  width: 65%;
+}
+
+.hot-drinks {
+  position: relative;
+  left: 35%;
+}
+
+
+/*********** Footer **********/
+
+footer {
+  background: url('../images/footer-menu.jpg') center center no-repeat;
+  background-size: cover;
+  clear: both;
+}
+
+
+/********** Media Queries **********/
+/**********               **********/
+
+@media only screen and (min-width: 765px) {
+
+  .menu-hero h1 {
+    font-size: 5rem;
+  }
+
+  .card {          /* override for .hotdrinks,.coldrinks in menu.css*/
+    width: 90%;
+    position: relative;
+
+  }
+
+  .right {   /* '' */
+    left: 10%;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .flex-container > li {
+    width: 45%;
+  }
+
+  .flex-container > li:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+
+  .card {          /* override */
+    width: 75%;
+    position: relative;
+  }
+
+  .right {
+    left: 25%;
+  }
+}

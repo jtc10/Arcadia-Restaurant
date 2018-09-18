@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Hammersmith+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+.company-font { /* Font styling for nav bars and titles */
+  font-family: 'Stardos Stencil', sans-serif;
+
+}
+
+header,
+.company-font,
+.section-header,
+.link-button {
+  text-transform: uppercase;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.page-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.hide {  /* class to hide drop down nav links */
+  height: 0px;
+  overflow: hidden;
+}
+
+/* .transition {
+  transform: translateY(50%);
+}
+
+.active {
+  transform: translateY(0%);
+
+} */
+
+
+/********** Nav Bars **********/
+/**********         **********/
+/**********         **********/
+
+/********* Base Navingation Bar for Responsive Site **********/
+
+.main-nav {      /* hide desktop nav bar */
+  display: none;
+}
+
+header {
+  width: 100%;
+  background: #f9f9f9;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+header a {
+  color: black;
+}
+
+.responsive-base-nav {  /* Styling for title and hamburger menu nav bar */
+  width: 90%;
+  height: 70px;
+  margin: auto;
+  position: relative;
+}
+
+.company-name {    /* H1 styling in responsive nav bar */
+  line-height: 70px;
+}
+
+.menu-toggle {  /* container for hamburger menu */
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {          /* hamburger icon for responsive nav menu */
+  content: '';
+  display: block;
+  background: black;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+}
+
+.hamburger {                      /* positioning for hamburger icon bars */
+  transform: translateY(4px);
+
+}
+.hamburger::before {
+  transform: translateY(9px);
+
+}
+.hamburger::after {
+  transform: translateY(15px);
+
+}
+
+/********** Responsive Nav Bar Drop Down Menu *********/
+
+/* .responsive-nav {
+  max-height: 1000px;
+  transition: max-height 1000ms ease;
+} */
+
+.responsive-nav ul {   /* styling for drop down ul links */
+  width: 100px;
+  margin: auto;
+}
+
+.responsive-nav ul li {   /* styling for drop down ul links */
+  text-align: center;
+  padding: 5px;
+}
+
+
+/********** Section Containers **********/
+/**********                    **********/
+
+/* Styling for sections with class 'section-container'*/
+
+.section-container {  /* styling for section containers */
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.section-header-wrapper { /* wrapper for h1 and h2 */
+    padding-top: 100px;
+    margin-bottom: 75px;
+}
+
+.section-header-wrapper::before { /* styling ahead of headers */
+  content: '';
+  display: block;
+  margin: 0 auto 75px auto;
+  background: red;
+  height: 2px;
+  width: 100px;
+  border-radius: 3px;
+}
+.section-header,
+.section-content {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.section-subtitle {  /* styling for h2 */
+  margin-top: 10px;
+  font-family: 'Bad Script', cursive;
+}
+
+.section-text-wrapper p {  /* styling for text below headers */
+  line-height: 2rem;
+  color: #778899;
+}
+
+.section-text-wrapper::after {
+  content: '';
+  display: block;
+  background: #D3D3D3;
+  margin: 50px auto;
+  height: 100px;
+  width: 2px;
+  border-radius: 3px;
+}
+
+.link-button {  /* styling for button links at bottom of sections */
+  width: 250px;
+  margin: auto;
+  padding: 15px 20px;
+  border: 1px solid red;
+}
+
+.button-margin {  /* styling to give buttons margin apearance */
+  padding-bottom: 50px;
+}
+
+.section-interlude {  /* interlude is section of "white space" in between some sections */
+  height: 50vh;
+}
+
+/********** Footer **********/
+/**********        **********/
+
+footer {
+  background: url('../images/footer-home.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.footer-container {  /* container for restaurant info */
+  height: 75vh;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top: -100px;
+  background: #f9f9f9;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 0 2px 1px #d3d3d3;
+}
+
+.footer-flex-container { /* Flex box container */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.flex-item {  /* individual items in flex container */
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.flex-item:first-child {
+  margin-bottom: 10px;
+}
+.social-media {  /* social media flex item */
+  line-height: 50px;
+}
+
+.social-box {  /* divs inside social media flex item */
+  display: inline-block;
+}
+.social-link-container {  /* container for FB/instagram links */
+  float: right;
+}
+
+.social-media > h2 {
+  font-size: 1.9rem;
+}
+
+.fa-facebook,
+.fa-instagram {    /* styling for FB/instagram links */
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    padding: 10px 12px;
+}
+.fa-instagram {
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+}
+
+.hours,
+.address {  /*  styling for flex items */
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+}
+
+.hours > h1 {
+  color: #ff6961;
+}
+
+.address > p {
+  font-size: 1.25rem;
+  letter-spacing: .2rem;
+}
+
+.address p:nth-child(2) {
+  font-weight: bold;
+}
+
+/********* Media Queries *********/
+/*********               *********/
+
+
+@media only screen and (min-width: 765px) {
+
+  .card {
+    width: 90%;
+    position: relative;
+
+  }
+
+  .section-text-wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  .right {
+    left: 10%;
+  }
+
+  .top {
+    top: -20px;
+  }
+
+  .top:nth-child(2) {
+    top: -40px;
+  }
+
+  .top:nth-child(3) {
+    top: -60px;
+  }
+
+  /* .top:nth-child(4) {
+    top: -80px;
+  }
+  .top:nth-child(5) {
+    top: -100px;
+  } */
+
+  /********** Footer *********/
+
+  footer {
+    height: 50vh;
+  }
+
+  .footer-container {  /* container for restaurant info */
+    height: 30vh;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: -100px;
+    background: #f9f9f9;
+    border: 1px solid #f1f1f1;
+  }
+
+  .footer-flex-container { /* Flex box container */
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .footer-container {
+    height: 380px;
+  }
+}
+
+@media only screen and (min-width: 1210px) {
+
+  /********** Main Nav Bar (Desktop) **********/
+
+  .responsive-nav,
+  .responsive-base-nav {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+  }
+  .main-nav .header-list:first-child {
+    margin-right: 10px;
+  }
+
+  .main-nav .header-list:last-child {
+    margin-left: 30px;
+  }
+
+  .company-name {
+    font-size: 3.5rem;
+    width: 215px;
+  }
+  .main-nav li,
+  .company-name,
+  .header-list {
+    display: inline-block;
+    line-height: 100px;
+  }
+
+  .main-nav li {
+    padding: 0 30px 0 30px;
+  }
+
+  /* .fl-left {
+    margin-right: 0px;
+  }
+
+  .fl-right {
+    margin-left: 0px;
+  }
+
+  .fl-left li {
+    padding-left: 0;
+  }
+
+  .fl-right li {
+    padding-right: 0;
+  } */
+
+  /********** Sections with class card(.card) *********/
+
+  .card {
+    width: 75%;
+    position: relative;
+  }
+
+  .right {
+    left: 25%;
+  }
+
+
+  /********** Footer *********/
+
+  .footer-container {  /* container for restaurant info */
+    width: 80%;
+  }
+
+}

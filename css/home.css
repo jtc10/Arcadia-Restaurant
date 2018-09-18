@@ -1,0 +1,114 @@
+
+
+.paralax-home {    /* Container for parallax scrolling image */
+  background: url('../images/background.jpg') center top no-repeat;
+  background-size: auto 100%;
+}
+
+/********** Landing Page **********/
+/**********              **********/
+
+.landing-page-container {
+  position: relative;
+  height: 100vh;
+}
+
+.logo-container {  /* container for logo */
+  width: 275px;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:  0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  border-top: 4px dotted black;
+  border-bottom: 4px dotted black;
+}
+
+.logo-container h1 {  /* company name inside log container */
+  display: block;
+  font-size: 4rem;
+  margin: auto;
+}
+
+.secondary-title {  /* styling for text in logo container */
+  color: #f9f9f9;
+  background-color: #ff6961;
+  letter-spacing: 0.5rem;
+  margin-bottom: 5px;
+  border: 1px solid red;
+}
+
+.about-link-section {   /* background colors for various sections */
+  background: #3b444d;
+}
+
+.menu-link-section,
+.reservations-link-section {
+  background: #f9f9f9;
+}
+
+/**********  Slideshow Section **********/
+/**********                    **********/
+
+.slideshow {
+  margin-top: 300px;
+  /* overflow: hidden; */
+}
+
+.slideshow-pic {  /* div containing pics for slideshow */
+  height: 65vh;
+}
+
+/* .slideshow-item {
+  position: relative;
+  left: 0;
+  right: 0;
+} */
+
+.pic-1 {
+  background: url('../images/figure-meksika-atesi.png') center center no-repeat;
+  background-size: cover;
+}
+
+.slideshow-content {  /* div for slideshow content */
+  background: #ff6961;
+  padding-bottom: 30px;
+  height: ;
+}
+
+.slideshow .section-header-wrapper,
+.slideshow .section-text-wrapper p {  /* styling for text below headers */
+  color: white;
+}
+
+
+.slideshow .section-header-wrapper::before,
+.slideshow .section-text-wrapper::after {
+  display: none;
+}
+
+/********** Media Queries **********/
+/**********               **********/
+
+@media only screen and (min-width: 1300px)  {
+
+  .slideshow {
+    display: flex;
+    height: 50vh;
+    width: 80%;
+    margin: auto;
+  }
+
+  .slideshow-pic {
+    height: 50vh;
+    width: 70%;
+  }
+
+  .slideshow-content {
+    width: 30%;
+    height: 50vh;
+  }
+}

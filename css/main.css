@@ -25,7 +25,13 @@ header,
 a {
   text-decoration: none;
   color: black;
+  transition: color .5s;
 }
+
+.nav-list-item:hover a {
+  color: #ff6961;
+}
+
 
 li {
   list-style: none;
@@ -37,7 +43,7 @@ li {
 }
 
 .hide {  /* class to hide drop down nav links */
-  height: 0px;
+  height: 0;
   overflow: hidden;
 }
 
@@ -121,9 +127,16 @@ header a {
   transition: max-height 1000ms ease;
 } */
 
+/* .responsive-nav {
+  height: 0;
+  transition: height .3;
+} */
+
 .responsive-nav ul {   /* styling for drop down ul links */
-  width: 100px;
+  width: 150px;
   margin: auto;
+  height: 115px;
+  transition: height .5s;
 }
 
 .responsive-nav ul li {   /* styling for drop down ul links */
@@ -379,7 +392,10 @@ footer {
 
   .company-name {
     font-size: 3.5rem;
-    width: 215px;
+    width: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
   }
   .main-nav li,
   .company-name,
@@ -388,25 +404,44 @@ footer {
     line-height: 100px;
   }
 
-  .main-nav li {
-    padding: 0 30px 0 30px;
-  }
-
-  /* .fl-left {
-    margin-right: 0px;
+   .fl-left {
+    float: left;
+    /* margin-left: 100px; */
   }
 
   .fl-right {
-    margin-left: 0px;
+    float: right;
+    /* margin-right: 100px; */
   }
 
   .fl-left li {
-    padding-left: 0;
+    margin-left: 100px;
   }
 
   .fl-right li {
-    padding-right: 0;
+    margin-right: 50px;
+  }
+
+  /* .nav-list-item::after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    bottom: 40px;
+    background-color:  #ff6961;
+    opacity: 0.5;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .nav-list-item:hover  .nav-list-item::after {
+    opacity: 1;
   } */
+
+
+
 
   /********** Sections with class card(.card) *********/
 

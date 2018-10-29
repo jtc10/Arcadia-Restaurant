@@ -55,18 +55,11 @@
 
 .slideshow {
   margin-top: 300px;
-  /* overflow: hidden; */
 }
 
 .slideshow-pic {  /* div containing pics for slideshow */
   height: 65vh;
 }
-
-/* .slideshow-item {
-  position: relative;
-  left: 0;
-  right: 0;
-} */
 
 .pic-1 {
   background: url('../images/figure-meksika-atesi.png') center center no-repeat;

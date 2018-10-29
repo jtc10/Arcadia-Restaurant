@@ -42,19 +42,6 @@ li {
   margin: auto;
 }
 
-.hide {  /* class to hide drop down nav links */
-
-}
-
-/* .transition {
-  transform: translateY(50%);
-}
-
-.active {
-  transform: translateY(0%);
-
-} */
-
 
 /********** Nav Bars **********/
 /**********         **********/
@@ -121,15 +108,6 @@ header a {
 
 /********** Responsive Nav Bar Drop Down Menu *********/
 
-/* .responsive-nav {
-  max-height: 1000px;
-  transition: max-height 1000ms ease;
-} */
-
-/* .responsive-nav {
-  height: 0;
-  transition: height .3;
-} */
 .responsive-nav {
   height: 0;
   overflow: hidden;
@@ -328,13 +306,6 @@ footer {
   .top:nth-child(3) {
     top: -60px;
   }
-
-  /* .top:nth-child(4) {
-    top: -80px;
-  }
-  .top:nth-child(5) {
-    top: -100px;
-  } */
 
   /********** Footer *********/
 

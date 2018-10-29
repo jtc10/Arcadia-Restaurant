@@ -43,8 +43,7 @@ li {
 }
 
 .hide {  /* class to hide drop down nav links */
-  height: 0;
-  overflow: hidden;
+
 }
 
 /* .transition {
@@ -131,12 +130,14 @@ header a {
   height: 0;
   transition: height .3;
 } */
-
+.responsive-nav {
+  height: 0;
+  overflow: hidden;
+  transition: height .5s;
+}
 .responsive-nav ul {   /* styling for drop down ul links */
   width: 150px;
   margin: auto;
-  height: 115px;
-  transition: height .5s;
 }
 
 .responsive-nav ul li {   /* styling for drop down ul links */
@@ -422,23 +423,24 @@ footer {
     margin-right: 50px;
   }
 
-  /* .nav-list-item::after {
+  .nav-list-item::after {
     content: '';
     display: block;
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
+    height: 0;
+    width: 3px;
+    border-radius: ;
     margin: auto;
     position: relative;
     bottom: 40px;
     background-color:  #ff6961;
-    opacity: 0.5;
-    transition: opacity .5s ease-in-out;
+    /* opacity: 0; */
+    transition: height .5s ease-in-out;
   }
 
-  .nav-list-item:hover  .nav-list-item::after {
-    opacity: 1;
-  } */
+  .nav-list-item:hover.nav-list-item::after {
+    /* opacity: 1; */
+    height: 25px;
+  }
 
 
 

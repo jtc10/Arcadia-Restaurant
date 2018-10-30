@@ -90,18 +90,22 @@
 
   .slideshow {
     display: flex;
-    height: 50vh;
+    /* height: 50vh; */
+    min-height: 50vh;
     width: 80%;
     margin: auto;
   }
 
-  .slideshow-pic {
-    height: 50vh;
+  .slideshow-pic,
+  .pic-1 {
+    /* height: 50vh; */
+    min-height: 50vh;
     width: 70%;
   }
 
   .slideshow-content {
     width: 30%;
-    height: 50vh;
+    /* height: 50vh; */
+    min-height: 50vh;
   }
 }

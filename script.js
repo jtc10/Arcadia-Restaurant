@@ -10,12 +10,6 @@ function toggleStyle(el, prop, style1, style2) {
 }
 toggleClass.addEventListener('click', e => {
   toggleStyle(classSwitch, 'height', '115px', '0');
-
-  // if (classSwitch.style.height = '0') {
-  //   classSwitch.style.height = '115px';
-  // } else if (classSwitch.style.height = '115px') {
-  //   classSwitch.style.height = '0';
-  // }
 });
 
 

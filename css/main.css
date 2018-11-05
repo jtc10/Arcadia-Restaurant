@@ -378,12 +378,10 @@ footer {
 
    .fl-left {
     float: left;
-    /* margin-left: 100px; */
   }
 
   .fl-right {
     float: right;
-    /* margin-right: 100px; */
   }
 
   .fl-left li {
@@ -404,12 +402,10 @@ footer {
     position: relative;
     bottom: 40px;
     background-color:  #ff6961;
-    /* opacity: 0; */
     transition: height .5s ease-in-out;
   }
 
   .nav-list-item:hover.nav-list-item::after {
-    /* opacity: 1; */
     height: 25px;
   }
 

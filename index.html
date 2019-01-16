@@ -13,67 +13,56 @@
 
 <body>
   <header>
-      <!-- Responsive Navigation Bar -->
-      <nav class="responsive-nav">
+      <!-- Navigation Bar -->
+      <nav class="navigation" id="navigation">
 
-        <ul class="header-list">
+        <ul class="nav_ul" id="nav_ul">
+
           <!-- Navigation Links -->
-          <li class="nav-list-item"><a href="index.html">Home</a></li>
-          <li class="nav-list-item"><a href="menu.html">Menu</a></li>
-          <li class="nav-list-item"><a href="about.html">About</a></li>
-          <li class="nav-list-item"><a href="reservations.html">Reservations</a></li>
+          <li class="nav_list_item"><a href="index.html">Home</a></li>
+          <li class="nav_list_item"><a href="menu.html">Menu</a></li>
+          <li class="nav_list_item">Arcadia</li>
+          <li class="nav_list_item"><a href="about.html">About</a></li>
+          <li class="nav_list_item"><a href="reservations.html">Reserve</a></li>
         </ul>
       </nav>
-      <nav class="responsive-base-nav">
+
+      <div class="nav_title_icon" id="nav_title_icon">
+
         <!-- responsive nav hamburger menu and Title-->
         <h1 class="company-name company-font">Arcadia</h1>
         <div class="menu-toggle">
           <div class="hamburger"></div>
         </div>
-      </nav>
 
-      <!-- Main (Desktop) Navigation Bar -->
-      <nav class="main-nav">
+     </div>
 
-       <ul class="header-list fl-left">
-          <!-- Navigation Links -->
-          <li class="nav-list-item"><a href="index.html">Home</a></li>
-          <li class="nav-list-item"><a href="menu.html">Menu</a></li>
-        </ul>
-
-        <h2 class="company-name company-font">Arcadia</h2>
-
-        <ul class="header-list fl-right">
-          <li class="nav-list-item"><a href="about.html">About</a></li>
-          <li class="nav-list-item"><a href="reservations.html">Reservations</a></li>
-        </ul>
-      </nav>
  </header>
- <!-- Container for parallax image -->
- <div class="paralax-home">
+
+  <main>
+
    <!-- Container for landing page -->
-   <div class="landing-page-container">
+   <div class="landing_page_container">
    <!-- container for company logo on landing page -->
-     <div class="logo-container">
-       <h1 class="company-font">Arcadia</h1>
-       <div class="secondary-title">
-         <h3 class="company-font">Mediterranean<br>Food &amp Drink</h3>
+     <div class="landing_logo_container">
+       <h1 class="logo_title">Arcadia</h1>
+       <div class="secondary_title">
+         <h3>Mediterranean<br>Food &amp Drink</h3>
        </div>
      </div>
   </div>
-  <main>
 
    <!-- Section for div that links to menu page -->
    <section class="menu-link-section">
      <div class="section-container">
        <!-- Container for section headers -->
-       <div class="section-header-wrapper">
-         <h1 class="section-header">Taste In The Coal Fire</h1>
-         <h3 class="section-subtitle">Arcadia Restaurant is Waiting For You</h3>
+       <div class="card_header_container">
+         <h1 class="card_header">Taste In The Coal Fire</h1>
+         <h3 class="card_subtitle">Arcadia Restaurant is Waiting For You</h3>
        </div>
        <!-- Container for section text -->
-       <div class="section-text-wrapper">
-         <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+       <div class="card_text_container">
+         <p class="text_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
        </div>
        <!-- link to menu page -->
@@ -90,13 +79,13 @@
    <section class="about-link-section card transition top">
      <div class="section-container">
        <!-- Container for section headers -->
-       <div class="section-header-wrapper">
-         <h1 class="section-header">Find Out What Made Us Great</h1>
-         <h3 class="section-subtitle">From the Past Comes Perfection</h3>
+       <div class="card_header_container">
+         <h1 class="card_header">Find Out What Made Us Great</h1>
+         <h3 class="card_subtitle">From the Past Comes Perfection</h3>
        </div>
        <!-- Container for section text -->
-       <div class="section-text-wrapper">
-         <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+       <div class="card_text_container">
+         <p class="text_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
        </div>
        <!-- link to about page -->
@@ -112,13 +101,13 @@
    <section class="reservations-link-section card transition right top">
      <div class="section-container">
        <!-- Container for section headers -->
-       <div class="section-header-wrapper">
-         <h1 class="section-header">Visit Us And Taste What We Mean</h1>
-         <h3 class="section-subtitle">Taste the magic behind Our Food</h3>
+       <div class="card_header_container">
+         <h1 class="card_header">Visit Us And Taste What We Mean</h1>
+         <h3 class="card_subtitle">Taste the magic behind Our Food</h3>
        </div>
        <!-- Container for section text -->
-       <div class="section-text-wrapper">
-         <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+       <div class="card_text_container">
+         <p class="text_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
        </div>
        <!-- link to reservations page -->
@@ -139,13 +128,13 @@
        <div class="slideshow-content">
          <div class="section-container">
          <!-- Container for section headers -->
-           <div class="section-header-wrapper">
-             <h1 class="section-header">Arcadia Special</h1>
-             <h3 class="section-subtitle">All Beef Burgers</h3>
+           <div class="card_header_container">
+             <h1 class="card_header">Arcadia Special</h1>
+             <h3 class="card_subtitle">All Beef Burgers</h3>
            </div>
            <!-- Container for section text -->
-           <div class="section-text-wrapper">
-             <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+           <div class="card_text_container">
+             <p class="text_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
            </div>
          </div>
@@ -154,8 +143,9 @@
 
    <section class="section-interlude"></section>
 
- </div>
-</main>
+  </div>
+ </main>
+
   <footer>
     <div class="footer-container transition">
       <!-- container for flex items -->

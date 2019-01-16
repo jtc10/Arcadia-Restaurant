@@ -3,26 +3,48 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
 /*branch-1*/
+/* company font - font-family: 'Stardos Stencil', sans-serif;*/
+/* section header/content - font-family: 'Hammersmith One', sans-serif;*/
+/* section subtitle - font-family: 'Bad Script', cursive;*/
+/* hours/address - font-family: 'Open Sans Condensed', sans-serif;*/
+
+/* This document contains the styling that is applied accross
+   all of this sites pages.  Navigation, typography, etc.
+   Styling for specific pages can be found on said pages css
+   doc. */
+
+/********** Global Values **********/
+/**********               **********/
 
 * {
   box-sizing: border-box;
+  /* font variable for Restaurant Title and links */
+  --company-font: 'Stardos Stencil', sans-serif;
+  --gray-background: #3b444d;
+  --white-background: #f9f9f9;
+  --red-background: #ff6961;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
 }
 
-header,
-.company-font { /* Font styling for nav bars and titles */
-  font-family: 'Stardos Stencil', sans-serif;
-
+/* Font styling for nav bars and titles */
+header {
+  position: fixed;
+  width: 100%;
+  background: var(--white-background);
+  border-bottom: 2px solid #f1f1f1;
+  font-family: var(--company-font);
+  opacity: 1;
+  transition: opacity .5s;
+  z-index: 10;
 }
 
-header,
-.company-font,
-.section-header,
-.link-button {
-  text-transform: uppercase;
+li {
+  list-style: none;
 }
-
 
 a {
   text-decoration: none;
@@ -30,63 +52,65 @@ a {
   transition: color .5s;
 }
 
-.nav-list-item:hover a {
-  color: #ff6961;
+header {
+  text-transform: uppercase;
 }
 
 
-li {
-  list-style: none;
-}
+/********** Navigation **********/
+/**********         ***********/
 
-.page-container {
-  max-width: 1300px;
+.navigation,
+.nav_title_icon {
+  display: flex;
+  width: 95%;
   margin: auto;
 }
 
+.navigation {
+  justify-content: center;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: height .5s;
+}
 
-/********** Nav Bars **********/
-/**********         **********/
-/**********         **********/
+.nav_title_icon {
+  justify-content: space-between;
+}
 
-/********* Base Navingation Bar for Responsive Site **********/
+.nav_title_icon > * {
+  margin: 10px 0;
+}
 
-.main-nav {      /* hide desktop nav bar */
+.nav_list_item {
+  margin: 5px 0;
+}
+
+/* hides title list item for desktop nav */
+.nav_list_item:nth-child(3) {
   display: none;
 }
 
-header {
-  width: 100%;
-  background: #f9f9f9;
-  border-bottom: 2px solid #f1f1f1;
+.nav_list_item:hover a {
+  color: var(--red-background);
 }
 
-header a {
-  color: black;
-}
+/***** Hamburger Menu Styling *****/
 
-.responsive-base-nav {  /* Styling for title and hamburger menu nav bar */
-  width: 90%;
-  height: 70px;
-  margin: auto;
-  position: relative;
-}
-
-.company-name {    /* H1 styling in responsive nav bar */
-  line-height: 70px;
-}
-
-.menu-toggle {  /* container for hamburger menu */
+/* container for hamburger menu */
+.menu-toggle {
   height: 30px;
   width: 30px;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  top: 20px;
+  top: 20px; */
 }
 
+/* hamburger icon for responsive nav menu */
 .hamburger,
 .hamburger::before,
-.hamburger::after {          /* hamburger icon for responsive nav menu */
+.hamburger::after {
   content: '';
   display: block;
   background: black;
@@ -95,7 +119,8 @@ header a {
   border-radius: 3px;
 }
 
-.hamburger {                      /* positioning for hamburger icon bars */
+ /* positioning for hamburger icon bars */
+.hamburger {
   transform: translateY(4px);
 
 }
@@ -106,23 +131,6 @@ header a {
 .hamburger::after {
   transform: translateY(15px);
 
-}
-
-/********** Responsive Nav Bar Drop Down Menu *********/
-
-.responsive-nav {
-  height: 0;
-  overflow: hidden;
-  transition: height .5s;
-}
-.responsive-nav ul {   /* styling for drop down ul links */
-  width: 150px;
-  margin: auto;
-}
-
-.responsive-nav ul li {   /* styling for drop down ul links */
-  text-align: center;
-  padding: 5px;
 }
 
 
@@ -137,12 +145,12 @@ header a {
   margin: auto;
 }
 
-.section-header-wrapper { /* wrapper for h1 and h2 */
+.card_header_container { /* wrapper for h1 and h2 */
     padding-top: 100px;
     margin-bottom: 75px;
 }
 
-.section-header-wrapper::before { /* styling ahead of headers */
+.card_header_container::before { /* styling ahead of headers */
   content: '';
   display: block;
   margin: 0 auto 75px auto;
@@ -151,22 +159,22 @@ header a {
   width: 100px;
   border-radius: 3px;
 }
-.section-header,
-.section-content {
+.card_header,
+.text_content {
   font-family: 'Hammersmith One', sans-serif;
 }
 
-.section-subtitle {  /* styling for h2 */
+.card_subtitle {  /* styling for h2 */
   margin-top: 10px;
   font-family: 'Bad Script', cursive;
 }
 
-.section-text-wrapper p {  /* styling for text below headers */
+.card_text_container p {  /* styling for text below headers */
   line-height: 2rem;
   color: #778899;
 }
 
-.section-text-wrapper::after {
+.card_text_container::after {
   content: '';
   display: block;
   background: #D3D3D3;
@@ -206,7 +214,7 @@ footer {
   margin: auto;
   position: relative;
   top: -100px;
-  background: #f9f9f9;
+  background: var(--white-background);
   border: 1px solid #f1f1f1;
   box-shadow: 0 0 2px 1px #d3d3d3;
 }
@@ -264,7 +272,7 @@ footer {
 }
 
 .hours > h1 {
-  color: #ff6961;
+  color: var(--red-background);
 }
 
 .address > p {
@@ -288,7 +296,7 @@ footer {
 
   }
 
-  .section-text-wrapper {
+  .card_text_container {
     width: 80%;
     margin: auto;
   }
@@ -321,7 +329,7 @@ footer {
     margin: auto;
     position: relative;
     top: -100px;
-    background: #f9f9f9;
+    background: var(--white-background);
     border: 1px solid #f1f1f1;
   }
 
@@ -340,43 +348,69 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1025px) {
+
+  /***** Navigation *****/
+
+  .nav_title_icon {
+    display: none; /* reset from resp. nav */
+  }
+
+  .navigation {
+    overflow: ; /* reset from resp. nav */
+    height: auto;
+  }
+
+  /* unordered list */
+  .nav_ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav_ul li {
+
+  }
+
+  /* Restaurant name in navigation menu */
+  .nav_list_item:nth-child(3) {
+    display: inline; /* reset from resp. nav */
+    font-size: 3.5rem;
+    flex: ;
+  }
+
+/* transition effects for nav links */
+  .nav_list_item::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 3px;
+    border-radius: ;
+    margin: auto;
+    position: relative;
+    bottom: 0px;
+    background-color:  var(--red-background);
+    transition: height .5s ease-in-out;
+  }
+
+/* transition effects for nav links */
+  .nav_list_item:hover.nav_list_item::after {
+    height: 25px;
+  }
+
+/* Negates transition effect for Restaurant name in nav bar */
+  .nav_list_item:nth-child(3):hover.nav_list_item::after {
+    height: 0;
+  }
+
+}
+
 @media only screen and (min-width: 1210px) {
 
   /********** Main Nav Bar (Desktop) **********/
 
-  .responsive-nav,
-  .responsive-base-nav {
-    display: none;
-  }
 
-  .main-nav {
-    display: block;
-    width: 90%;
-    height: 100px;
-    margin: auto;
-    text-align: center;
-  }
-  .main-nav .header-list:first-child {
-    margin-right: 10px;
-  }
-
-  .main-nav .header-list:last-child {
-    margin-left: 30px;
-  }
-
-  .company-name {
-    font-size: 3.5rem;
-    width: 250px;
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: center;
-  }
-  .main-nav li,
-  .company-name,
-  .header-list {
-    display: inline-block;
-    line-height: 100px;
-  }
 
    .fl-left {
     float: left;
@@ -394,22 +428,7 @@ footer {
     margin-right: 50px;
   }
 
-  .nav-list-item::after {
-    content: '';
-    display: block;
-    height: 0;
-    width: 3px;
-    border-radius: ;
-    margin: auto;
-    position: relative;
-    bottom: 40px;
-    background-color:  #ff6961;
-    transition: height .5s ease-in-out;
-  }
 
-  .nav-list-item:hover.nav-list-item::after {
-    height: 25px;
-  }
 
 
 

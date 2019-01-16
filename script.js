@@ -2,15 +2,34 @@
 // Script for responsive nav bar menu
 
 const toggleClass = document.querySelector('.menu-toggle');
-const classSwitch = document.querySelector('.responsive-nav');
+const classSwitch = document.querySelector('.navigation');
+// test window size
+const mq1 = window.matchMedia('screen and (min-width: 1025px)');
 
+/* Function allowing the click of the .menu-toggle class
+   to affect the height of the .navigation class */
 
 function toggleStyle(el, prop, style1, style2) {
   el.style[prop] = el.style[prop] === style1 ? style2 : style1
 }
+
+ // Event listener for opening responsive navigation menu
 toggleClass.addEventListener('click', e => {
   toggleStyle(classSwitch, 'height', '115px', '0');
 });
+
+// Changes height of .navigation to < 0 when screen size increases
+function widthChange() {
+  if (mq1.matches) {
+    classSwitch.style.height = 'auto';
+    console.log("hello");
+  } else if (!mq1.matches) {
+    classSwitch.style.height = '0';
+  }
+}
+
+// Changes height of .navigation to < 0 when screen size increases
+window.addEventListener('resize', widthChange);
 
 
 // Script for Slideshow

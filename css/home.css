@@ -1,53 +1,68 @@
 
+/********** Global Values **********/
+/**********               **********/
 
-.paralax-home {    /* Container for parallax scrolling image */
+* {
+  
+}
+body {
   background: url('../images/background.jpg') center top no-repeat;
   background-size: auto 100%;
 }
 
+
+
+/********** Typography **********/
+/**********            **********/
+
+
+
 /********** Landing Page **********/
 /**********              **********/
 
-.landing-page-container {
-  position: relative;
+.landing_page_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-.logo-container {  /* container for logo */
+/* container for logo */
+.landing_logo_container {
   width: 275px;
   height: 130px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top:  0;
-  bottom: 0;
-  margin: auto;
   text-align: center;
+  font-family: var(--company-font);
+  text-transform: uppercase;
   border-top: 4px dotted black;
   border-bottom: 4px dotted black;
+  opacity: 1;
+  transition: opacity .5s;
 }
 
-.logo-container h1 {  /* company name inside log container */
+/* company name inside log container */
+.landing_logo_container h1 {
   display: block;
   font-size: 4rem;
   margin: auto;
 }
 
-.secondary-title {  /* styling for text in logo container */
-  color: #f9f9f9;
-  background-color: #ff6961;
+/* styling for text in logo container */
+.secondary_title {
+  color: var(--white-background);
+  background-color: var(--red-background);
   letter-spacing: 0.5rem;
   margin-bottom: 5px;
   border: 1px solid red;
 }
 
 .about-link-section {   /* background colors for various sections */
-  background: #3b444d;
+  background: var(--gray-background);
 }
 
 .menu-link-section,
 .reservations-link-section {
-  background: #f9f9f9;
+  background: var(--white-background);
 }
 
 /**********  Slideshow Section **********/
@@ -67,7 +82,7 @@
 }
 
 .slideshow-content {  /* div for slideshow content */
-  background: #ff6961;
+  background: var(--red-background);
   padding-bottom: 30px;
   height: ;
 }

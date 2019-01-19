@@ -3,7 +3,7 @@
 /**********               **********/
 
 * {
-  
+  --light-red-background: #ff6961;
 }
 body {
   background: url('../images/background.jpg') center top no-repeat;
@@ -50,7 +50,7 @@ body {
 /* styling for text in logo container */
 .secondary_title {
   color: var(--white-background);
-  background-color: var(--red-background);
+  background-color: var(--light-red-background);
   letter-spacing: 0.5rem;
   margin-bottom: 5px;
   border: 1px solid red;
@@ -82,7 +82,7 @@ body {
 }
 
 .slideshow-content {  /* div for slideshow content */
-  background: var(--red-background);
+  background: var(--light-red-background);
   padding-bottom: 30px;
   height: ;
 }

@@ -22,7 +22,8 @@
   --company-font: 'Stardos Stencil', sans-serif;
   --gray-background: #3b444d;
   --white-background: #f9f9f9;
-  --red-background: #ff6961;
+  --light-red-background: #ff6961;
+  --red: red;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -52,8 +53,29 @@ a {
   transition: color .5s;
 }
 
-header {
+header,
+.link-button a,
+.social-media h2 {
   text-transform: uppercase;
+}
+
+/********** Color Classes **********/
+/**********               **********/
+
+.gray {
+  background: var(--gray-background);
+}
+
+.red {
+  background: var(--light-red-background);
+}
+
+.white {
+  background: var(--white-background);
+}
+
+.yellow {
+
 }
 
 
@@ -93,7 +115,7 @@ header {
 }
 
 .nav_list_item:hover a {
-  color: var(--red-background);
+  color: var(--light-red-background);
 }
 
 /***** Hamburger Menu Styling *****/
@@ -102,9 +124,6 @@ header {
 .menu-toggle {
   height: 30px;
   width: 30px;
-  /* position: absolute;
-  right: 0;
-  top: 20px; */
 }
 
 /* hamburger icon for responsive nav menu */
@@ -134,68 +153,88 @@ header {
 }
 
 
-/********** Section Containers **********/
+/********** Card / Containers **********/
 /**********                    **********/
 
-/* Styling for sections with class 'section-container'*/
-
-.section-container {  /* styling for section containers */
-  text-align: center;
+.card {
+  height: 100vh;
   width: 90%;
-  margin: auto;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
 }
 
-.card_header_container { /* wrapper for h1 and h2 */
-    padding-top: 100px;
-    margin-bottom: 75px;
-}
-
-.card_header_container::before { /* styling ahead of headers */
-  content: '';
-  display: block;
-  margin: 0 auto 75px auto;
-  background: red;
-  height: 2px;
-  width: 100px;
-  border-radius: 3px;
-}
 .card_header,
 .text_content {
   font-family: 'Hammersmith One', sans-serif;
 }
 
-.card_subtitle {  /* styling for h2 */
+/* styling for h2 */
+.card_subtitle {
   margin-top: 10px;
   font-family: 'Bad Script', cursive;
 }
 
-.card_text_container p {  /* styling for text below headers */
+/* styling for text below headers */
+.card_text_container p {
   line-height: 2rem;
   color: #778899;
 }
 
+/* styling ahead of headers */
+.card_header_container::before {
+  content: '';
+  display: block;
+  margin: 50px auto 25px auto;
+  background: var(--red);
+  height: 2px;
+  width: 100px;
+  border-radius: 3px;
+}
+
+/* styling after of headers */
 .card_text_container::after {
   content: '';
   display: block;
   background: #D3D3D3;
-  margin: 50px auto;
+  margin: 25px auto 0 auto;
   height: 100px;
   width: 2px;
   border-radius: 3px;
+
 }
 
-.link-button {  /* styling for button links at bottom of sections */
+/* styling for button links at bottom of sections */
+.link-button {
   width: 250px;
-  margin: auto;
-  padding: 15px 20px;
-  border: 1px solid red;
+  height: 40px;
+  border: 1px solid var(--red);
 }
 
-.button-margin {  /* styling to give buttons margin apearance */
-  padding-bottom: 50px;
+.link-button a {
+  line-height: 40px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
-.section-interlude {  /* interlude is section of "white space" in between some sections */
+.link-button a:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* interlude is section of "white space" in between some sections */
+.section-interlude {
   height: 50vh;
 }
 
@@ -208,7 +247,8 @@ footer {
   height: 100vh;
 }
 
-.footer-container {  /* container for restaurant info */
+/* container for restaurant info */
+.footer-container {
   height: 75vh;
   width: 90%;
   margin: auto;
@@ -219,39 +259,44 @@ footer {
   box-shadow: 0 0 2px 1px #d3d3d3;
 }
 
-.footer-flex-container { /* Flex box container */
+/* Flex box container */
+.footer-flex-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 90%;
+  height: 100%;
   margin: auto;
-  padding-top: 60px;
 }
 
-.flex-item {  /* individual items in flex container */
+/* individual items in flex container */
+.flex-item {
   width: 100%;
-  margin-bottom: 35px;
 }
 
-.flex-item:first-child {
-  margin-bottom: 10px;
-}
-.social-media {  /* social media flex item */
+/* social media flex item */
+.social-media {
   line-height: 50px;
 }
 
-.social-box {  /* divs inside social media flex item */
+/* divs inside social media flex item */
+.social-box {
   display: inline-block;
 }
-.social-link-container {  /* container for FB/instagram links */
+
+/* container for FB/instagram links */
+.social-link-container {
   float: right;
 }
 
 .social-media > h2 {
   font-size: 1.9rem;
+  font-family: var(--company-font);
 }
 
+/* styling for FB/instagram links */
 .fa-facebook,
-.fa-instagram {    /* styling for FB/instagram links */
+.fa-instagram {
   padding: 10px;
   color: white;
   border-radius: 50%;
@@ -265,14 +310,15 @@ footer {
   background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
 }
 
+/*  styling for flex items */
 .hours,
-.address {  /*  styling for flex items */
+.address {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
 }
 
 .hours > h1 {
-  color: var(--red-background);
+  color: var(--light-red-background);
 }
 
 .address > p {
@@ -287,35 +333,14 @@ footer {
 /********* Media Queries *********/
 /*********               *********/
 
+@media only screen and (max-width: 764px) {
+  .footer-container {
+    height: 380px;
+  }
+}
 
 @media only screen and (min-width: 765px) {
 
-  .card {
-    width: 90%;
-    position: relative;
-
-  }
-
-  .card_text_container {
-    width: 80%;
-    margin: auto;
-  }
-
-  .right {
-    left: 10%;
-  }
-
-  .top {
-    top: -20px;
-  }
-
-  .top:nth-child(2) {
-    top: -40px;
-  }
-
-  .top:nth-child(3) {
-    top: -60px;
-  }
 
   /********** Footer *********/
 
@@ -323,28 +348,20 @@ footer {
     height: 50vh;
   }
 
-  .footer-container {  /* container for restaurant info */
+/* container for restaurant info */
+  .footer-container {
     height: 30vh;
     width: 90%;
     margin: auto;
     position: relative;
     top: -100px;
-    background: var(--white-background);
     border: 1px solid #f1f1f1;
   }
 
-  .footer-flex-container { /* Flex box container */
-    display: flex;
+/* Flex box container */
+  .footer-flex-container {
     flex-direction: row;
-    width: 90%;
-    margin: auto;
     padding-top: 100px;
-  }
-}
-
-@media only screen and (max-width: 764px) {
-  .footer-container {
-    height: 380px;
   }
 }
 
@@ -369,15 +386,10 @@ footer {
     justify-content: space-between;
   }
 
-  .nav_ul li {
-
-  }
-
   /* Restaurant name in navigation menu */
   .nav_list_item:nth-child(3) {
     display: inline; /* reset from resp. nav */
     font-size: 3.5rem;
-    flex: ;
   }
 
 /* transition effects for nav links */
@@ -390,7 +402,7 @@ footer {
     margin: auto;
     position: relative;
     bottom: 0px;
-    background-color:  var(--red-background);
+    background-color:  var(--light-red-background);
     transition: height .5s ease-in-out;
   }
 
@@ -408,41 +420,6 @@ footer {
 
 @media only screen and (min-width: 1210px) {
 
-  /********** Main Nav Bar (Desktop) **********/
-
-
-
-   .fl-left {
-    float: left;
-  }
-
-  .fl-right {
-    float: right;
-  }
-
-  .fl-left li {
-    margin-left: 100px;
-  }
-
-  .fl-right li {
-    margin-right: 50px;
-  }
-
-
-
-
-
-
-  /********** Sections with class card(.card) *********/
-
-  .card {
-    width: 75%;
-    position: relative;
-  }
-
-  .right {
-    left: 25%;
-  }
 
 
   /********** Footer *********/

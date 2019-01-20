@@ -1,8 +1,9 @@
 
-.reservations-page-section {
-  background: url('../images/background.jpg') center top no-repeat;
-  background-size: ;
+body {
+  background: url('../images/background.jpg') center center no-repeat;
+  background-size: cover;
 }
+
 
 .invitation-section{
   background: #f9f9f9;

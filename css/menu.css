@@ -2,88 +2,94 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css?family=Handlee');
 
-.paralax-menu {  /* background image for menu page */
-  background: url('../images/background-menu.jpg') center center no-repeat;
-  background-size: cover;
-  min-height: 100%;
+
+/********* Global Values *********/
+/*********               *********/
+
+* {
+  /* font variable for Restaurant Title and links */
+  --company-font: 'Stardos Stencil', sans-serif;
+  --menu-title-font: 'Open Sans Condensed', sans-serif;
+  --menu-item-font: 'Maven Pro', sans-serif;
+  --menu-item-description-font: 'Handlee', cursive;
+  --gray-background: #3b444d;
+  --white-background: #f9f9f9;
+  --light-red-background: #ff6961;
+  --red: red;
 }
 
-/**********  Menu Introduction Section **********/
-/**********                            **********/
+body {
+  background: url('../images/background-menu.jpg') center center no-repeat;
+  background-size: cover;
+}
 
-.menu-hero {  /* styling for menu introduction */
+.menu_landing_page_title {
+  text-transform: uppercase;
+}
+
+/* hides psuedo element "after" on .card classes */
+.alt_page.card_text_container::after {
+  display: none;
+}
+
+/**********  Menu Landing Page **********/
+/**********                    **********/
+
+/* styling for menu introduction */
+.menu_landing_page {
   background: url('../images/menu-bg.png') center center no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
 }
-.menu-hero h1 {
-  color: #f9f9f9;
-  padding-top: 40px;
+
+
+.menu_landing_page_title {
+  color: var(--white-background);
+  padding-top: 100px;
   letter-spacing: 1rem;
+  font-family: var(--company-font);
 }
 
 /**********  General Styling for Menu Sections **********/
 /**********                                    **********/
 
-
-.menu-section .section-container {  /* styling for sections on menu page */
-  text-align: left;
-  font-weight: lighter;
+.menu_content_container {
+  width: 90%;
+  margin: auto;
 }
 
-.section-text-wrapper {  /* styling override from main.css */
-  padding-bottom: 50px;
-}
-.section-text-wrapper::after {  /* styling override from main.css */
-  content: '';
-  display: none;
-}
-
-.menu-header {  /* styling for the title(h1) of each menu section */
+/* styling for the title(h1) of each menu section */
+.menu_header {
   font-size: 2.5rem;
   padding-top: 100px;
   margin-bottom: 50px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: var(--menu-title-font);
 }
 
-.flex-container {  /* container for list of menu items */
+/* container for list of menu items */
+.menu_content_ul {
   display: flex;
   width: 100%;
   flex-direction: column;
   padding-bottom: 100px;
 }
 
-.menu-item {  /* individual menu items */
-  font-family: 'Maven Pro', sans-serif;
+/* individual menu items */
+.menu_item {
+  font-family: var(--menu-item-font);
   font-size: 1.1rem;
   border-bottom: 1px dashed #D3D3D3;
   padding: 25px 0;
 }
 
-.menu-item-description { /* description of menu items when applicable */
+/* description of menu items when applicable */
+.menu_item--description {
   font-size: .9rem;
-  font-family: 'Handlee', cursive;
+  font-family: var(--menu-item-description-font);
   padding-top: 5px;
 }
 
-.starters-salads,
-.cold-drinks {         /* background for various sections */
-  background: #3b444d;
-}
-
-.menu-intro,
-.drinks-intro,
-.grill,
-.hot-drinks {
-  background: #f9f9f9;
-}
-
-
-
-.argentina-special {
-  background: #ff6961;
-}
 
 /********** Drinks Section **********/
 
@@ -103,7 +109,6 @@
 footer {
   background: url('../images/footer-menu.jpg') center center no-repeat;
   background-size: cover;
-  clear: both;
 }
 
 
@@ -112,42 +117,10 @@ footer {
 
 @media only screen and (min-width: 765px) {
 
-  .menu-hero h1 {
-    font-size: 5rem;
-  }
 
-  .card {          /* override for .hotdrinks,.coldrinks in menu.css*/
-    width: 90%;
-    position: relative;
-
-  }
-
-  .right {  
-    left: 10%;
-  }
-
-  .flex-container {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-
-  .flex-container > li {
-    width: 45%;
-  }
-
-  .flex-container > li:nth-child(odd) {
-    margin-right: 30px;
-  }
 }
 
 @media only screen and (min-width: 1020px) {
 
-  .card {          /* override */
-    width: 75%;
-    position: relative;
-  }
 
-  .right {
-    left: 25%;
-  }
 }

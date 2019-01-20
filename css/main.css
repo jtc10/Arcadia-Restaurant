@@ -189,7 +189,7 @@ header,
 .card_header_container::before {
   content: '';
   display: block;
-  margin: 50px auto 25px auto;
+  margin: 50px auto 15% auto;
   background: var(--red);
   height: 2px;
   width: 100px;
@@ -201,7 +201,7 @@ header,
   content: '';
   display: block;
   background: #D3D3D3;
-  margin: 25px auto 0 auto;
+  margin: 15% auto 0 auto;
   height: 100px;
   width: 2px;
   border-radius: 3px;
@@ -356,12 +356,13 @@ footer {
     position: relative;
     top: -100px;
     border: 1px solid #f1f1f1;
+
   }
 
 /* Flex box container */
   .footer-flex-container {
     flex-direction: row;
-    padding-top: 100px;
+    padding-top: 75px;
   }
 }
 

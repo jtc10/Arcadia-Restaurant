@@ -1,7 +1,11 @@
 
-
-.about-page-section {
+body {
   background: #f4cf3a;
+}
+
+img {
+ height: 250px;
+ width: 250px;
 }
 
 .image-container {
@@ -11,17 +15,23 @@
   margin: 0 auto 100px auto;
 }
 
-.section-container img {
-  height: 250px;
-  width: 250px;
+.card_header_container {
+
 }
 
-.section-text-wrapper {
-  padding-bottom: 200px;
+.card_text_container {
+
 }
 
-.section-header-wrapper::before,
-.section-text-wrapper::after { /* styling ahead of headers */
+.card_header_container,
+.card_text_container {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.card_header_container::before,
+.card_text_container::after {
   display: none;
 }
 

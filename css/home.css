@@ -68,35 +68,52 @@ body {
 /**********  Slideshow Section **********/
 /**********                    **********/
 
-.slideshow {
-  margin-top: 300px;
+
+.specials_text_container .card_header_container::before,
+.specials_text_container .card_text_container::after,
+.specials_content_container-2 {
+  display: none;  /* override from main.css */
 }
 
-.slideshow-pic {  /* div containing pics for slideshow */
-  height: 65vh;
+.specials_container {
+  width: 100%;
+
 }
 
-.pic-1 {
-  background: url('../images/figure-meksika-atesi.png') center center no-repeat;
-  background-size: cover;
+.specials_content_container-1,
+.specials_content_container-2 {
+
 }
 
-.slideshow-content {  /* div for slideshow content */
+.specials_image_container {
+  overflow: hidden;
+  height: 70vh;
+}
+
+img {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.specials_text_container {
   background: var(--light-red-background);
-  padding-bottom: 30px;
-  height: ;
+  color: var(--white-background);
+  text-align: center;
+  height: auto;
+}
+.specials_text_container .card_text_container,
+.specials_text_container .card_header_container {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
 }
 
-.slideshow .section-header-wrapper,
-.slideshow .section-text-wrapper p {  /* styling for text below headers */
-  color: white;
+.specials_text_container,
+.specials_text_container .card_text_container p {
+  color: var(--white-background);
 }
 
-
-.slideshow .section-header-wrapper::before,
-.slideshow .section-text-wrapper::after {
-  display: none;
-}
 
 /********** Media Queries **********/
 /**********               **********/

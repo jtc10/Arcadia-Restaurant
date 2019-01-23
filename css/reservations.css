@@ -5,30 +5,19 @@ body {
 }
 
 
-.invitation-section{
-  background: #f9f9f9;
-}
-.invitation-section .section-text-wrapper::after {
-  content: '';
-  display: none;
-}
-
 .image-container {
   height: 40vh;
   width: 100%;
 }
 
+.image-container img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .slideshow-image {
   height: 100%;
   width: 100%;
-}
-
-.section-text-wrapper {
-  padding-bottom: 100px;
-}
-
-.map-link-section {
-  background: #3b444d;
 }
 
 footer {
@@ -38,9 +27,7 @@ footer {
 
 @media only screen and (min-width: 760px) {
 
-  .map-link-section {
-    top: -50px;
-  }
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -48,12 +35,6 @@ footer {
 
   .image-container {
     height: 75vh;
-  }
-
-  .map-link-section {
-    top: -50px;
-    width: 60%;
-    left: 10%;
   }
 
 }

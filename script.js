@@ -3,8 +3,14 @@
 
 const toggleClass = document.querySelector('.menu-toggle');
 const classSwitch = document.querySelector('.navigation');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelectorAll('.right-arrow');
+const container1 = document.querySelector('.specials_content_container-1');
+const container2 = document.querySelector('.specials_content_container-2');
 // test window size
-const mq1 = window.matchMedia('screen and (min-width: 1025px)');
+const mq1 = window.matchMedia('screen and (min-width: 1023px)');
+
+
 
 /* Function allowing the click of the .menu-toggle class
    to affect the height of the .navigation class */
@@ -17,6 +23,20 @@ function toggleStyle(el, prop, style1, style2) {
 toggleClass.addEventListener('click', e => {
   toggleStyle(classSwitch, 'height', '115px', '0');
 });
+
+/* Functions used on the carousel for
+   specials on home page */
+
+
+   leftArrow.addEventListener('click', function() {
+      container1.style.transform = 'translateX(-100%)';
+      container2.style.transform = 'translateX(-100%)';
+   })
+
+   rightArrow[1].addEventListener('click', function() {
+      container1.style.transform = 'translateX(0)';
+      container2.style.transform = 'translateX(0)';
+   })
 
 // Changes height of .navigation to < 0 when screen size increases
 function widthChange() {

@@ -29,6 +29,7 @@
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
+  max-width: 2400px;
 }
 
 /* Font styling for nav bars and titles */
@@ -57,6 +58,18 @@ header,
 .link-button a,
 .social-media h2 {
   text-transform: uppercase;
+}
+
+/********** Card layout classes *********/
+/**********                     *********/
+
+/* class for using "transition" property */
+.card--transition {
+
+}
+/* class for positioning some cards to right of screen */
+.card--right {
+
 }
 
 /********** Color Classes **********/
@@ -156,8 +169,16 @@ header,
 /********** Card / Containers **********/
 /**********                    **********/
 
-.card {
+/* container for .card classes */
+.card_container,
+/* container for .card classes that are at the top of a section */
+.card_lead_container {
   height: 100vh;
+  max-height: 980px;
+}
+
+.card {
+  height: 100%;
   width: 90%;
   margin:auto;
   display: flex;
@@ -227,7 +248,10 @@ header,
 }
 
 
-
+/* hides psuedo element "after" on .card classes */
+.alt_page.card_text_container::after {
+  /* display: none; */
+}
 
 
 
@@ -333,6 +357,15 @@ footer {
 /********* Media Queries *********/
 /*********               *********/
 
+@media only screen and (min-height: 660px) {
+
+  .card_container,
+  .card_lead_container {
+    height: 70vh;
+  }
+}
+
+
 @media only screen and (max-width: 764px) {
   .footer-container {
     height: 380px;
@@ -340,6 +373,20 @@ footer {
 }
 
 @media only screen and (min-width: 765px) {
+
+  /********** card / Containers **********/
+
+  .card_container {
+    width: 80%;
+  }
+
+  .card--transition {
+    position: relative;
+  }
+
+  .card--right {
+    left: 20%;
+  }
 
 
   /********** Footer *********/
@@ -366,7 +413,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1023px) {
 
   /***** Navigation *****/
 
@@ -375,7 +422,7 @@ footer {
   }
 
   .navigation {
-    overflow: ; /* reset from resp. nav */
+    overflow: visible; /* reset from resp. nav */
     height: auto;
   }
 
@@ -417,16 +464,39 @@ footer {
     height: 0;
   }
 
+  /********** .card / Container *********/
+
+  .card_container,
+  .card_lead_container {
+    height: 60vh;
+  }
+
+  .card_lead_container .card {
+    width: 70%;
+  }
+
 }
 
 @media only screen and (min-width: 1210px) {
 
+  .page-container {
+    width: 80%;
+    margin: auto;
+  }
 
 
   /********** Footer *********/
 
   .footer-container {  /* container for restaurant info */
     width: 80%;
+  }
+
+}
+
+@media only screen and (min-width: 2400px) {
+
+  body {
+    margin: auto;
   }
 
 }

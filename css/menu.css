@@ -27,10 +27,6 @@ body {
   text-transform: uppercase;
 }
 
-/* hides psuedo element "after" on .card classes */
-.alt_page.card_text_container::after {
-  display: none;
-}
 
 /**********  Menu Landing Page **********/
 /**********                    **********/
@@ -117,6 +113,29 @@ footer {
 
 @media only screen and (min-width: 765px) {
 
+  .menu_landing_page_title {
+    font-size: 4rem;
+  }
+
+  /**********  menu card *********/
+
+  .menu_card {
+    width: 80%;
+    height: ;
+  }
+
+  .menu_content_ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+/* styling to split menu list into two columns */
+  .menu_content_ul li {
+    width: 45%;
+  }
+  .menu_content_ul li:nth-child(odd) {
+    margin-right: 25px;
+  }
 
 }
 

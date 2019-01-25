@@ -23,6 +23,10 @@ body {
   background-size: cover;
 }
 
+header {
+  opacity: 1;
+}
+
 .menu_landing_page_title {
   text-transform: uppercase;
 }

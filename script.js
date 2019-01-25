@@ -4,12 +4,13 @@
 const toggleClass = document.querySelector('.menu-toggle');
 const classSwitch = document.querySelector('.navigation');
 const leftArrow = document.querySelector('.left-arrow');
+const header = document.getElementsByTagName('header');
+const logo = document.querySelector('.landing_logo_container');
 const rightArrow = document.querySelectorAll('.right-arrow');
 const container1 = document.querySelector('.specials_content_container-1');
 const container2 = document.querySelector('.specials_content_container-2');
 // test window size
 const mq1 = window.matchMedia('screen and (min-width: 1023px)');
-
 
 
 /* Function allowing the click of the .menu-toggle class
@@ -42,7 +43,6 @@ toggleClass.addEventListener('click', e => {
 function widthChange() {
   if (mq1.matches) {
     classSwitch.style.height = 'auto';
-    console.log("hello");
   } else if (!mq1.matches) {
     classSwitch.style.height = '0';
   }
@@ -50,6 +50,23 @@ function widthChange() {
 
 // Changes height of .navigation to < 0 when screen size increases
 window.addEventListener('resize', widthChange);
+
+// Header and landing page logo styling for scrolling
+
+function checkHeaderScroll() {
+    if (window.pageYOffset > 10) {
+      header[0].style.opacity = '1';
+      logo.style.opacity = '0';
+      logo.style.transform = 'translateY(-250%)';
+    } else if (window.pageYOffset < 10) {
+      header[0].style.opacity = '0';
+      logo.style.opacity = '1';
+      logo.style.transform = 'translateY(0)';
+    }
+}
+window.addEventListener('scroll', checkHeaderScroll);
+
+console.log("hello");
 
 
 // Script for Slideshow

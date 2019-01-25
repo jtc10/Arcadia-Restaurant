@@ -4,6 +4,10 @@ body {
   background-size: cover;
 }
 
+header {
+  opacity: 1;
+}
+
 
 .image-container {
   height: 40vh;

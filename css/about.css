@@ -2,6 +2,9 @@
 body {
   background: #f4cf3a;
 }
+header {
+  opacity: 1;
+}
 
 img {
  height: 250px;

@@ -65,7 +65,9 @@ header,
 
 /* class for using "transition" property */
 .card--transition {
-
+  position: relative;
+  transform: translateY(20%);
+  transition: transform .5s;
 }
 /* class for positioning some cards to right of screen */
 .card--right {
@@ -250,7 +252,7 @@ header,
 
 /* hides psuedo element "after" on .card classes */
 .alt_page.card_text_container::after {
-  /* display: none; */
+
 }
 
 
@@ -271,16 +273,22 @@ footer {
   height: 100vh;
 }
 
+/* Gives footer-container transition effect on scroll *same as .card--transition* */
+.footer--transition {
+  transform: translateY(20%);
+  transition: transform .5s;
+}
+
 /* container for restaurant info */
 .footer-container {
   height: 75vh;
   width: 90%;
   margin: auto;
   position: relative;
-  top: -100px;
   background: var(--white-background);
   border: 1px solid #f1f1f1;
   box-shadow: 0 0 2px 1px #d3d3d3;
+
 }
 
 /* Flex box container */
@@ -378,10 +386,6 @@ footer {
 
   .card_container {
     width: 80%;
-  }
-
-  .card--transition {
-    position: relative;
   }
 
   .card--right {

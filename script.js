@@ -9,6 +9,8 @@ const logo = document.querySelector('.landing_logo_container');
 const rightArrow = document.querySelectorAll('.right-arrow');
 const container1 = document.querySelector('.specials_content_container-1');
 const container2 = document.querySelector('.specials_content_container-2');
+const sliderCards = document.querySelectorAll('.card--transition');
+const footerSlide = document.querySelectorAll('.footer--transition');
 // test window size
 const mq1 = window.matchMedia('screen and (min-width: 1023px)');
 
@@ -25,19 +27,8 @@ toggleClass.addEventListener('click', e => {
   toggleStyle(classSwitch, 'height', '115px', '0');
 });
 
-/* Functions used on the carousel for
-   specials on home page */
 
 
-   leftArrow.addEventListener('click', function() {
-      container1.style.transform = 'translateX(-100%)';
-      container2.style.transform = 'translateX(-100%)';
-   })
-
-   rightArrow[1].addEventListener('click', function() {
-      container1.style.transform = 'translateX(0)';
-      container2.style.transform = 'translateX(0)';
-   })
 
 // Changes height of .navigation to < 0 when screen size increases
 function widthChange() {
@@ -54,6 +45,7 @@ window.addEventListener('resize', widthChange);
 // Header and landing page logo styling for scrolling
 
 function checkHeaderScroll() {
+  if(document.location.pathname == '/index.html'){
     if (window.pageYOffset > 10) {
       header[0].style.opacity = '1';
       logo.style.opacity = '0';
@@ -63,42 +55,12 @@ function checkHeaderScroll() {
       logo.style.opacity = '1';
       logo.style.transform = 'translateY(0)';
     }
-}
-window.addEventListener('scroll', checkHeaderScroll);
-
-console.log("hello");
-
-
-// Script for Slideshow
-const image = [
-  // '../images/karakoy-1.jpg',
-  // '../images/karakoy-2.jpg',
-  // '../images/karakoy-3.jpg',
-  // '../images/karakoy-4.jpg',
-  // '../images/karakoy-5.jpg',
-  'images/karakoy-1.jpg',
-  'images/karakoy-2.jpg',
-  'images/karakoy-3.jpg',
-  'images/karakoy-4.jpg',
-  'images/karakoy-5.jpg',
-
-];
-let i = 0;
-const imageContainer = document.getElementsByClassName('slideshow-image');
-const time = 3000;
-
-function changeSlide() {
-  imageContainer[0].src = image[i];
-  if (i < image.length - 1) {
-    i++;
-  } else {
-    i = 0;
+  } else if (window.top){
+    header[0].style.opacity = '1';
   }
-
-  setTimeout('changeSlide()', time);
 }
 
-changeSlide();
+window.addEventListener('scroll', checkHeaderScroll);
 
 
 // Slide in on scroll for .cards
@@ -122,22 +84,26 @@ function debounce(func, wait = 20, immediate = true) {
       };
 };
 
-const sliderCards = document.querySelectorAll('.transition');
-
-console.log(sliderCards[0].height);
 
 function slideIn() {
-  // sliderCards.forEach(sliderCard => {
-  //       // half way through the image
-  //       const slideInAt = (window.scrollY + window.innerHeight) - sliderCard.height / 2;
-  //       // bottom of the image
-  //       const imageBottom = sliderCard.offsetTop + sliderCard.height;
-  //       const isHalfShown = slideInAt > sliderCard.offsetTop;
-  //       const isNotScrolledPast = window.scrollY < imageBottom;
-  //       if (isHalfShown && isNotScrolledPast) {
-  //         sliderCard.classList.add('.active');
-  //       }
-  //     });
+  sliderCards.forEach(sliderCard => {
+        const slideInAt = (window.scrollY + window.innerHeight) -  sliderCard.clientHeight / 3;
+        const isHalfShown = slideInAt > sliderCard.offsetTop;
+        if (isHalfShown) {
+          sliderCard.style.transform = 'translateY(0)';
+        }
+      });
+}
+
+function footerSlideIn() {
+  footerSlide.forEach(footerSlider => {
+    const slideInAt = (window.scrollY + window.innerHeight) - footerSlider.clientHeight /4;
+    const isHalfShown = slideInAt > footerSlider.offsetTop;
+    if (isHalfShown) {
+      footerSlider.style.transform = 'translateY(-20%)';
+    }
+  })
 }
 
 window.addEventListener('scroll', debounce(slideIn));
+window.addEventListener('scroll', debounce(footerSlideIn));

@@ -45,7 +45,7 @@ window.addEventListener('resize', widthChange);
 // Header and landing page logo styling for scrolling
 
 function checkHeaderScroll() {
-  if (document.location.pathname == '/index.html') {
+  
     if (window.pageYOffset > 10) {
       header[0].style.opacity = '1';
       logo.style.opacity = '0';
@@ -55,9 +55,6 @@ function checkHeaderScroll() {
       logo.style.opacity = '1';
       logo.style.transform = 'translateY(0)';
     }
-  } else if (window.top) {
-    header[0].style.opacity = '1';
-  }
 }
 
 window.addEventListener('scroll', checkHeaderScroll);

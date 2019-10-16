@@ -412,7 +412,7 @@ footer {
     position: relative;
     top: -100px;
     border: 1px solid #f1f1f1;
-
+    min-height: 170px;
   }
 
 /* Flex box container */

@@ -157,6 +157,16 @@ img {
 /********** Media Queries **********/
 /**********               **********/
 
+@media only screen and (min-width: 765px)  {
+
+  .specials_image_container,
+  img {
+    height: 50vh;
+    min-height: 425px;
+  }
+
+}
+
 @media only screen and (min-width: 1024px)  {
 
   .specials_text_container .card_text_container,

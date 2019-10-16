@@ -384,6 +384,11 @@ footer {
 
   /********** card / Containers **********/
 
+  .card_container,
+  .card_lead_container {
+    min-height: 570px;
+  }
+
   .card_container {
     width: 80%;
   }

@@ -28,8 +28,6 @@ toggleClass.addEventListener('click', e => {
 });
 
 
-
-
 // Changes height of .navigation to < 0 when screen size increases
 function widthChange() {
   if (mq1.matches) {
